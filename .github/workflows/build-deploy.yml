@@ -23,6 +23,10 @@ jobs:
               with:
                   name: octomatch
                   path: dist
+            - name: List artifact contents
+              run: |
+                  echo "Listing contents of the uploaded artifact:"
+                  tree dist
     dev:
         name: Deploy Dev
         needs: build
